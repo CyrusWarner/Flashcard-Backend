@@ -18,10 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('collectionofflashcards.urls'))
+    path('', include('collectionofflashcards.urls')),
+    path('', include('flashcard.urls')),
 ]
-
-"""
-path('', include('flashcard.urls')),
-
-"""
