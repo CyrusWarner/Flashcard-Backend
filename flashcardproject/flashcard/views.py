@@ -18,12 +18,21 @@ class FlashcardList(APIView):
         return Response(serializer.data)
 
 
-class FlashCardUpdate(APIView):
+class FlashcardUpdate(APIView):
     def put(self, request, flashcard_id):
         flashcard = Flashcard.objects.get(pk=flashcard_id)
         serializer = FlashcardSerializer(flashcard, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class FlashcardPost(APIView):
+    def post(self, request):
+        serializer = FlashcardSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
