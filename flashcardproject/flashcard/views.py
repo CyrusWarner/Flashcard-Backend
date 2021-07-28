@@ -40,5 +40,6 @@ class FlashcardPost(APIView):
 class FlashcardDelete(APIView):
     def delete(self, request, flashcard_id):
         flashcard = Flashcard.objects.get(pk=flashcard_id)
+        serializer = FlashcardSerializer(flashcard)
         flashcard.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)
