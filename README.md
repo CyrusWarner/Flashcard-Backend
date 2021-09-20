@@ -46,11 +46,9 @@ BUGGED =    :warning:
  --->
 
 ### Future Tasks  
-:x: Add ability to change between light and dark mode 
 
-:x: Add a settings section for a collection
 
-:x: Add functionality for allowing the collection owner to remove a collection
+:x: Add a method for allowing the collection owner to remove a collection
 
 :x: Add a method for updating a collection
 
