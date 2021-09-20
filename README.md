@@ -37,15 +37,6 @@ Flashcard Tracker Back-End using Django Rest API
 
 :heavy_check_mark: Add a flashcard Model with id, question, answer, and a foreign key for the collection it is attached to
 
-:x: Add a method for updating a collection
-
-:x: Add a model for a user
-
-:x: Add a method for logging a user in
-
-:x: Add a method for signing a user up 
-
-
 <!--- 
 Emojis for the Task List:
 DONE =      :heavy_check_mark:
@@ -58,7 +49,16 @@ BUGGED =    :warning:
 :x: Add ability to change between light and dark mode 
 
 :x: Add a settings section for a collection
+
 :x: Add functionality for allowing the collection owner to remove a collection
+
+:x: Add a method for updating a collection
+
+:x: Add a model for a user
+
+:x: Add a method for logging a user in
+
+:x: Add a method for signing a user up 
 
 ---
 ## Technologies
